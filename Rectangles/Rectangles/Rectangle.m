@@ -11,6 +11,41 @@
 @implementation Rectangle {
 }
 
++(instancetype)rectangle {
+    Rectangle *rec = [[Rectangle alloc] init];
+    return rec;
+}
+
++(instancetype)rectangleWithWidth:(int)width height:(int)height {
+    Rectangle *rec = [[Rectangle alloc] init];
+    [rec setWidth:width];
+    [rec setHeight:height];
+    return rec;
+}
+
+-(instancetype)init {
+    return [self initWithWidth:10 height:20];
+//    self = [super init];
+//    if (self) {
+//        //  초기화 동작
+////        width = 10;
+////        height = 20;
+//
+//        [self setWidth:10];
+//        [self setHeight:20];
+//    }
+//    return self;
+}
+
+-(instancetype)initWithWidth:(int)newWidth height:(int)newHeight {
+    self = [super init];
+    if (self) {
+        [self setWidth:newWidth];
+        [self setHeight:newHeight];
+    }
+    return self;
+}
+
 -(BOOL)isSquare {
     return width == height;
 }

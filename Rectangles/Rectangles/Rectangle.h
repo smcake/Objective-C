@@ -14,7 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
     int width;
     int height;
 }
++(instancetype)rectangle;
++(instancetype)rectangleWithWidth:(int)width height:(int)height;
 
+-(instancetype)initWithWidth:(int)newWidth height:(int)newHeight;
+-(instancetype)initWithWidth:(int)newWidth;
 -(void)setWidth:(int)newWidth;
 -(int)width;
 
